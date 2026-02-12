@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- PostgreSQL Driver -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/DemoJDBC</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">YOUR_PASSWORD</property>
+
+        <!-- JDBC connection pool -->
+        <property name="hibernate.connection.pool_size">10</property>
+
+        <!-- PostgreSQL Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Show SQL in console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Auto create/update tables -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+    </session-factory>
+</hibernate-configuration>
